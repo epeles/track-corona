@@ -2,10 +2,10 @@ const filter = document.querySelector('#filter');
 const thead = document.querySelector('#thead');
 thead.innerHTML = `
     <tr >
-        <th>País</th>
-        <th>Confirmados</th>
-        <th>Mortos</th>
-        <th class="no-show">Recuperados</th>
+        <th>Country</th>
+        <th>Confirmed</th>
+        <th>Deaths</th>
+        <th class="no-show">Recovered</th>
     </tr>
     `
 ;
@@ -35,9 +35,9 @@ async function showCorona() {
         totalConfirmed += element.confirmed;
         
         document.getElementById("output").innerHTML = temp;
-        document.getElementById("updated").innerHTML = `Atualizado em ${corona[0].updated.slice(0, 19)}`;
-        document.getElementById("dead").innerHTML = `<b>Total de mortos:</b> ${formatNum(totalDead)}`;
-        document.getElementById("confirmed").innerHTML = `<b>Total de contaminados:</b> ${formatNum(totalConfirmed)}`;
+        document.getElementById("updated").innerHTML = `Updated on ${corona[0].updated.slice(0, 19)}`;
+        document.getElementById("dead").innerHTML = `<b>Total number of deaths:</b> ${formatNum(totalDead)}`;
+        document.getElementById("confirmed").innerHTML = `<b>Total number of confirmed:</b> ${formatNum(totalConfirmed)}`;
     });   
 }
 
