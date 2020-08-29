@@ -26,9 +26,9 @@ async function showCorona() {
             temp += `
                 <tr class="country-name" data-country="${element.location}" style="display: none;">
                     <td><a href="https://www.trackcorona.live/country/${element.country_code}" target="_blank"><img src="https://www.countryflags.io/${element.country_code}/flat/64.png" alt="${element.location}"></a></td>            
-                    <td>${formatNum(element.confirmed)}</td>
-                    <td>${formatNum(element.dead)}</td>
-                    <td class="no-show">${formatNum(element.recovered)}</td>
+                    <td class="align">${formatNum(element.confirmed)}</td>
+                    <td class="align">${formatNum(element.dead)}</td>
+                    <td class="align no-show">${formatNum(element.recovered)}</td>
                 </tr>
             `;
         totalDead += element.dead;

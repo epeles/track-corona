@@ -11,10 +11,25 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
+.header {
+    background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/SARS-CoV-2_without_background.png/1200px-SARS-CoV-2_without_background.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center center;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 100px 0;
+    /* width: 100%; */
+    position: relative; 
+} 
+
 h1 {
-    font-size: 6vh;
-    color: blue;
-    font-weight: bolder;
+    font-size: 9vh;
+    font-weight: 900;
+    color:#ffffff;
     padding: 10px 10px;
     text-align: center;
 }
@@ -22,20 +37,16 @@ h1 {
 h6 {
     font-style: italic;
     font-size: 2vh;
-    text-align: right;
+    /* text-align: right; */
 }
 
 p {
     /* font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; */
     font-size: 3vh;
 }
-/* 
-table {
-    width: 40px;
-} */
 
 .filter {
-    width: 30%;
+    width: 466px;
     padding: 12px;
     margin-bottom: 10px;
 }
@@ -49,10 +60,31 @@ tbody {
     background-color:whitesmoke;
 }
 
-table {
+table.table {
     border: 0.15rem solid;
+    max-width: 50px;
+    width: auto;
+    min-width: 0;
+    display:table;
 }
 
+th, td {
+    min-width: 115px;
+}
+
+td.align {
+    padding-top: 25px;
+}
+
+footer {
+    position: absolute;
+    left: 0;
+    bottom: 0; 
+    width: 100%;
+    background-color: #b30000;
+    color: white;
+    text-align: center;
+}
 
 @media only screen and (max-width: 600px) {
     .no-show {
@@ -61,4 +93,21 @@ table {
     img {
         width: 45px;
     }
+    .filter {
+        width: 90%;
+        padding: 8px;
+    }
+    .header {
+        padding: 0;
+        background-image: none;
+    }
+
+    footer {
+        display: none;
+    }
+    table.table {
+        max-width: fit-content;
+        
+    }
+    
 }
